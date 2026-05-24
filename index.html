@@ -149,6 +149,30 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
 
+        /* Фікс спеціально для мобільного плеєра Google Диску */
+        .drive-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .drive-container iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .drive-container {
+                height: 210px; /* Повертаємо повноцінну висоту на смартфонах */
+                padding-bottom: 0;
+            }
+            .drive-container iframe {
+                position: relative;
+                height: 100%;
+            }
+        }
+
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -223,10 +247,10 @@
             </div>
         </div>
 
-        <!-- БЛОК 2: Велике привітання з Google Диску (ВИПРАВЛЕНО) -->
+        <!-- БЛОК 2: Велике привітання з Google Диску (З адаптивним фіксом) -->
         <h2>ПРИВІТАННЯ ВІД ДРУЗІВ (ВІДЕО)</h2>
         <div class="video-box">
-            <div class="video-container">
+            <div class="drive-container">
                 <iframe src="https://drive.google.com/file/d/16IeqdIeFFpm_hms-5rso_7MHkV3zRj-0/preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
