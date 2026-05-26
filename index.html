@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>З Днем Народження, Едгаре!</title>
+    <title>Едгар Миротворець — Офіційний сайт</title>
     
     <link rel="icon" type="image/jpeg" href="avva.png">
     <link rel="shortcut icon" href="avva.png" type="image/x-icon">
@@ -83,43 +83,6 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.9);
             letter-spacing: 1px;
             font-weight: 800;
-        }
-
-        .countdown-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .timer-unit {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(5px);
-            padding: 10px;
-            border-radius: 12px;
-            min-width: 60px;
-        }
-
-        .timer-num {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--gold);
-        }
-
-        .timer-label {
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            color: #888;
-        }
-
-        .bday-wish {
-            font-size: 1.8rem;
-            color: var(--gold);
-            font-weight: bold;
-            display: none;
-            text-shadow: 0 0 15px rgba(255,215,0,0.6);
         }
 
         .container {
@@ -204,22 +167,14 @@
         <img src="avva.png" alt="Edgar" class="main-avatar">
         <header>
             <h1>ЕДГАР МИРОТВОРЕЦЬ</h1>
-            
-            <div id="timer" class="countdown-container">
-                <div class="timer-unit"><span id="days" class="timer-num">00</span><span class="timer-label">днів</span></div>
-                <div class="timer-unit"><span id="hours" class="timer-num">00</span><span class="timer-label">год</span></div>
-                <div class="timer-unit"><span id="minutes" class="timer-num">00</span><span class="timer-label">хв</span></div>
-                <div class="timer-unit"><span id="seconds" class="timer-num">00</span><span class="timer-label">сек</span></div>
-            </div>
-            <div id="wish" class="bday-wish">З ДНЕМ НАРОДЖЕННЯ, ЕДГАРЕ! 🎉</div>
         </header>
     </div>
 
     <div class="container">
-        <h2>ПРИВІТАННЯ ВІД ДРУЗІВ</h2>
+        <h2>АКТУАЛЬНЕ ВІДЕО</h2>
         <div class="video-box">
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/GZhM77FiJVE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Nh0SHY5ZoVk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -252,30 +207,6 @@
     </div>
 
     <script>
-        function updateTimer() {
-            const targetDate = new Date("May 25, 2026 00:00:00").getTime();
-            const now = new Date().getTime();
-            const diff = targetDate - now;
-
-            if (diff <= 0) {
-                document.getElementById('timer').style.display = 'none';
-                document.getElementById('wish').style.display = 'block';
-                return;
-            }
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerText = d.toString().padStart(2, '0');
-            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
-            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
-            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
-        }
-        setInterval(updateTimer, 1000);
-        updateTimer();
-
         const canvas = document.getElementById('sparks-canvas');
         const ctx = canvas.getContext('2d');
         let width, height, sparks = [];
