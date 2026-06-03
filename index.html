@@ -98,7 +98,6 @@
             font-weight: 800;
         }
 
-        /* Стилі для нового блоку опису сайту */
         .profile-desc {
             max-width: 650px;
             margin: 10px auto 0;
@@ -136,24 +135,53 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
 
+        /* Стилі для групування з іконками */
+        .category-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin: 45px 0 20px;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .category-title svg {
+            width: 26px;
+            height: 26px;
+            fill: var(--gold);
+        }
+
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .link-item {
             background: var(--glass);
             border: 1px solid var(--glass-border);
-            padding: 20px;
+            padding: 18px 20px;
             border-radius: 16px;
             text-decoration: none;
             color: #fff;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .link-item svg {
+            width: 22px;
+            height: 22px;
+            margin-right: 15px;
+            fill: #fff;
+            flex-shrink: 0;
             transition: 0.3s;
         }
 
@@ -161,6 +189,10 @@
             background: rgba(255, 215, 0, 0.08);
             border-color: var(--gold);
             transform: translateY(-3px);
+        }
+
+        .link-item:hover svg {
+            fill: var(--gold);
         }
 
         footer {
@@ -191,7 +223,7 @@
         <img src="avva.png" alt="Edgar" class="main-avatar">
         <header>
             <h1>ЕДГАР МИРОТВОРЕЦЬ</h1>
-            <p class="profile-desc">Ласкаво просимо на офіційний сайт Едгара Миротворця! Тут зібрані всі актуальні ресурси спільноти: офіційні канали, чати та соціальні мережі, щоб ви завжди залишалися на зв'язку.</p>
+            <p class="profile-desc">Ласкаво просимо на офіційний сайт Едгара Миротворця! Тут зібрані всі офіційні ресурси, канали та соціальні мережі спільноти, щоб ви завжди залишалися на зв'язку.</p>
         </header>
     </div>
 
@@ -199,32 +231,68 @@
         <h2>АКТУАЛЬНЕ ВІДЕО</h2>
         <div class="video-box">
             <div class="video-container">
-                <!-- Вставлено коректне посилання для інтеграції плеєра -->
                 <iframe src="https://www.youtube.com/embed/STwy7jGi2D0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
-        <h2>ОФІЦІЙНІ РЕСУРСИ</h2>
+        <!-- КАНАЛИ YOUTUBE -->
+        <div class="category-title">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube Канали
+        </div>
         <div class="links-grid">
-            <a href="https://www.youtube.com/@EdgarLive2026" class="link-item" target="_blank">Edgar Live 2026</a>
-            <a href="https://youtube.com/@MIROTVORETS_NA_SVYAZI" class="link-item" target="_blank">Миротворець на зв'язку</a>
-            <a href="https://t.me/edgarU" class="link-item" target="_blank">Telegram Канал</a>
-            <a href="https://patreon.com/Edgarastream" class="link-item" target="_blank">Patreon Support</a>
-            <a href="https://instagram.com/edgar_mirotvorets" class="link-item" target="_blank">Instagram</a>
-            <a href="https://tiktok.com/@edgaruakeeper" class="link-item" target="_blank">TikTok Official</a>
-            <a href="https://t.me/edgarasUA" class="link-item" target="_blank">Чат Спільноти</a>
+            <a href="https://youtube.com/@MIROTVORETS_NA_SVYAZI" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                МИРОТВОРЕЦ С НА СВЯЗИ
+            </a>
+            <a href="https://www.youtube.com/channel/UCkxxTBzcJKTe-X0u6ZARYqQ" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                ПО ТУ СТОРОНУ БАРРИКАД
+            </a>
+            <a href="https://www.youtube.com/channel/UCg_dduKucLlTmSXvsU7rTuw" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                СВЕТ И СВОБОДА
+            </a>
+            <a href="https://www.youtube.com/channel/UCK4xgUODkkIEl8W1ChqpMiw" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Эдгар ГражданинМира
+            </a>
         </div>
 
-        <h2>ДРУЗІ ЕДГАРА</h2>
+        <!-- СПІЛЬНОТА ТЕЛЕГРАМ -->
+        <div class="category-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.15-.04-.22-.02-.1.02-1.67 1.06-4.73 3.12-.45.31-.86.46-1.22.45-.4-.01-1.17-.23-1.74-.41-.7-.23-1.26-.35-1.21-.74.03-.2.29-.41.79-.62 3.09-1.34 5.15-2.23 6.19-2.66 2.95-1.23 3.56-1.44 3.96-1.44.09 0 .28.02.41.12.11.09.14.22.15.31v.16z"/></svg>
+            Telegram Спільнота
+        </div>
         <div class="links-grid">
-            <a href="https://www.youtube.com/@OleksandrBespaly" class="link-item" target="_blank">Олександр Безпалий</a>
-            <a href="https://t.me/strikedronescompany" class="link-item" target="_blank">Strike Drones Company</a>
-            <a href="https://www.youtube.com/@RUSSIAGOODBYE_LIVE" class="link-item" target="_blank">Раша Гудбай</a>
-            <a href="https://www.youtube.com/@%D0%A1%D1%82%D0%B0%D0%BD%D1%96%D1%81%D0%BB%D0%B0%D0%B2%D0%A7%D1%83%D0%BC%D0%B0%D0%BA" class="link-item" target="_blank">Станіслав Чумак</a>
-            <a href="https://www.youtube.com/@EnotDiversant02" class="link-item" target="_blank">Єнот диверсант</a>
-            <a href="https://t.me/radioshoom_official" class="link-item" target="_blank">Radio Shoom</a>
-            <a href="https://www.youtube.com/@MaestroTalks" class="link-item" target="_blank">Maestro Talks</a>
-            <a href="https://youtube.com/@yamiller.musicc" class="link-item" target="_blank">YaMiller</a>
+            <a href="https://t.me/edgarU" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.15-.04-.22-.02-.1.02-1.67 1.06-4.73 3.12-.45.31-.86.46-1.22.45-.4-.01-1.17-.23-1.74-.41-.7-.23-1.26-.35-1.21-.74.03-.2.29-.41.79-.62 3.09-1.34 5.15-2.23 6.19-2.66 2.95-1.23 3.56-1.44 3.96-1.44.09 0 .28.02.41.12.11.09.14.22.15.31v.16z"/></svg>
+                Едгар Миротворець
+            </a>
+            <a href="https://t.me/edgarasUA" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.15-.04-.22-.02-.1.02-1.67 1.06-4.73 3.12-.45.31-.86.46-1.22.45-.4-.01-1.17-.23-1.74-.41-.7-.23-1.26-.35-1.21-.74.03-.2.29-.41.79-.62 3.09-1.34 5.15-2.23 6.19-2.66 2.95-1.23 3.56-1.44 3.96-1.44.09 0 .28.02.41.12.11.09.14.22.15.31v.16z"/></svg>
+                В гостях у Эдгара
+            </a>
+        </div>
+
+        <!-- ІНШІ СОЦМЕРЕЖІ ТА ПІДТРИМКА -->
+        <div class="category-title">
+            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm4.5 15.5a3.5 3.5 0 1 1 3.5-3.5 3.5 3.5 0 0 1-3.5 3.5z"/></svg>
+            Соціальні Мережі & Підтримка
+        </div>
+        <div class="links-grid">
+            <a href="https://patreon.com/Edgarastream" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M22.921 9.428c0-3.57-2.895-6.474-6.474-6.474-3.58 0-6.474 2.904-6.474 6.474 0 3.58 2.895 6.474 6.474 6.474 3.579 0 6.474-2.894 6.474-6.474zM1.079 21h4.15V3h-4.15v18z"/></svg>
+                ПАТРЕОН
+            </a>
+            <a href="https://tiktok.com/@edgaruakeeper" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M12.5 22.5c-4.1 0-7.5-3.4-7.5-7.5s3.4-7.5 7.5-7.5c.6 0 1.2.1 1.8.2v3.7c-.6-.2-1.2-.3-1.8-.3-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8 3.8-1.7 3.8-3.8V1.5h3.8c0 2.1 1.7 3.8 3.8 3.8v3.8c-1.3 0-2.5-.7-3.2-1.7v9.1c0 4.1-3.4 7.5-7.5 7.5z"/></svg>
+                ТИК ТОК
+            </a>
+            <a href="https://instagram.com/edgar_mirotvorets" class="link-item" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                ИНСТАГРАМ
+            </a>
         </div>
 
         <footer>
